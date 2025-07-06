@@ -111,6 +111,24 @@ The app is deployed and publicly accessible at:
 | **Port**           | Served on https:// via Nginx reverse proxy      |
 
 ---
+## 🪵 Branches
+
+This project has two branches for different deployment use cases:
+
+| Branch Name         | Purpose                                                   |
+|---------------------|-----------------------------------------------------------|
+| `main` (or `local-db-version`)  | Uses a local PostgreSQL database for development/testing |
+| `aws-rds-version`   | Connects to AWS RDS using `.env` variables for credentials |
+
+> To switch between branches:
+
+```bash
+git checkout main              # Local DB version
+git checkout aws-rds-version  # AWS RDS version (secure)
+```
+
+Each branch has its own `Database_cred_and_func.py` logic appropriate to its setup.
+
 
 ## 🔌 Manual Deployment on AWS EC2
 
