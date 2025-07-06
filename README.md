@@ -60,9 +60,9 @@ venv\Scripts\activate       # Windows
 </pre>
 ### 3. Install dependencies
 
-'''
+<pre>
 pip install -r requirements.txt
-'''
+</pre>
 
 ### 4. Set up PostgreSQL (locally or use AWS RDS)
 Update your DB credentials in Database_cred_and_func.py:
@@ -79,16 +79,16 @@ conn = psycopg2.connect(
 ### 5. Run the Flask app
 'python app.py'
 Then visit:
-'''
+<pre>
 http://localhost:5000
-'''
+</pre>
 ☁️ Hosting on AWS EC2
 Launch an EC2 instance (Ubuntu recommended)
 
 SSH into it:
-'''
+<pre>
 ssh -i your-key.pem ubuntu@<your-ec2-ip>
-'''
+</pre>
 Install dependencies:
 <pre>
 sudo apt update && sudo apt install python3-pip git
