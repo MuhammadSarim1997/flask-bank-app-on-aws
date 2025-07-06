@@ -30,6 +30,7 @@ A simple **banking web app** built with **Flask**, showcasing full-stack develop
 
 ## 📁 Folder Structure
 
+<pre>
 flask-bank-app-on-aws/
 │
 ├── app.py # Flask app entrypoint
@@ -38,25 +39,30 @@ flask-bank-app-on-aws/
 ├── Database_cred_and_func.py # DB connection & credentials
 ├── requirements.txt # Python dependencies
 └── .gitpod.yml # (Optional) Gitpod config
-
+</pre>
 ---
 
 ## 🔧 Setup Instructions
 
 ### 1. Clone the repo
 
-
+<pre>
 git clone https://github.com/MuhammadSarim1997/flask-bank-app-on-aws.git
 cd flask-bank-app-on-aws
+</pre>
 
 ### 2. Create a virtual environment (optional but recommended)
 
+<pre>
 python -m venv venv
 source venv/bin/activate    # Mac/Linux
 venv\Scripts\activate       # Windows
-
+</pre>
 ### 3. Install dependencies
+
+'''
 pip install -r requirements.txt
+'''
 
 ### 4. Set up PostgreSQL (locally or use AWS RDS)
 Update your DB credentials in Database_cred_and_func.py:
@@ -71,16 +77,18 @@ conn = psycopg2.connect(
 </pre>
   
 ### 5. Run the Flask app
-python app.py
+'python app.py'
 Then visit:
+'''
 http://localhost:5000
-
+'''
 ☁️ Hosting on AWS EC2
 Launch an EC2 instance (Ubuntu recommended)
 
 SSH into it:
-
+'''
 ssh -i your-key.pem ubuntu@<your-ec2-ip>
+'''
 Install dependencies:
 <pre>
 sudo apt update && sudo apt install python3-pip git
@@ -90,18 +98,11 @@ Clone this repo and set up the app as above
 Allow port 5000 or use nginx for production
 
 
-🧠 Author
+## 🧠 Author
 Muhammad Sarim
 GitHub • LinkedIn
 
-📄 License
+## 📄 License
 This project is licensed under the MIT License. See LICENSE for details.
 
 ---
-
-Would you like me to:
-- Add AWS deployment instructions via `nginx` & `gunicorn`?
-- Create `.gitignore` for Flask + Python + VSCode?
-- Auto-generate a LICENSE file (MIT)?
-
-Let me know and I can bundle them up.
